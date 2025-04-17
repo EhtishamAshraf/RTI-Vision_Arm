@@ -1,0 +1,4 @@
+# Service to load the light positions
+string lps
+---
+bool successfully_loaded

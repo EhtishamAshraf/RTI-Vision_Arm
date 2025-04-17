@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/esirem/Desktop/M2_Thesis/4-RTI_Bot/eva_rti_ws/devel/lib/python3/dist-packages",
+        "/home/esirem/Desktop/M2_Thesis/4-Team_repo/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/esirem/Desktop/M2_Thesis/4-RTI_Bot/eva_rti_ws/devel/lib/python3/dist-packages",
+        "/home/esirem/Desktop/M2_Thesis/4-Team_repo/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

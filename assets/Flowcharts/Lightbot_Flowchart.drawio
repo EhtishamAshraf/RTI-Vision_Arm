@@ -1,0 +1,96 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" version="26.2.12">
+  <diagram name="Page-1" id="JyfK7v_L3Pvij6fHd2mg">
+    <mxGraphModel dx="1332" dy="805" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IO8795PvD08IkSDCkcih-8" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="IO8795PvD08IkSDCkcih-1" target="IO8795PvD08IkSDCkcih-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-1" value="Start System" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-179.5" y="-16" width="106" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-9" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="IO8795PvD08IkSDCkcih-27" target="IO8795PvD08IkSDCkcih-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-2" value="Generate Points in a Spherical or Circular form around the object&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-47" y="-31" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-10" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="IO8795PvD08IkSDCkcih-3" target="IO8795PvD08IkSDCkcih-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="64" />
+              <mxPoint x="131" y="46" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-3" value="Sort Poses based on Distance using Greedy Search" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="247" y="-31" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-14" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="IO8795PvD08IkSDCkcih-4" target="IO8795PvD08IkSDCkcih-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-4" value="Reach Poses Sequentially by Proximity" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="73" y="86" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-20" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="IO8795PvD08IkSDCkcih-6" target="IO8795PvD08IkSDCkcih-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-21" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="IO8795PvD08IkSDCkcih-6" target="IO8795PvD08IkSDCkcih-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="9" y="363" />
+              <mxPoint x="73" y="235" />
+              <mxPoint x="-5" y="99" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-6" value="Have all poses reached?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="93" y="312" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-7" value="Go back to Home Position (Eva Arm)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="204" y="334.5" width="117" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-16" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="IO8795PvD08IkSDCkcih-13" target="IO8795PvD08IkSDCkcih-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-18" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="IO8795PvD08IkSDCkcih-13" target="IO8795PvD08IkSDCkcih-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-13" value="Reached&amp;nbsp;&lt;div&gt;a Pose?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="96.5" y="169" width="73" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-19" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="IO8795PvD08IkSDCkcih-15" target="IO8795PvD08IkSDCkcih-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-15" value="Capture an image, and save it" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="77" y="257" width="112" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-17" value="Change color of the Pose to mark it as unreachable Pose" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="213" y="179.25" width="117" height="44.5" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-22" value="&lt;b&gt;YES&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="157.5" y="315.5" width="50" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-23" value="&lt;b&gt;NO&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="54.5" y="315.5" width="42" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-24" value="&lt;b&gt;YES&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="137" y="229" width="50" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-25" value="&lt;b&gt;NO&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="165.5" y="176" width="42" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-28" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="IO8795PvD08IkSDCkcih-2" target="IO8795PvD08IkSDCkcih-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="96" y="-1" as="sourcePoint" />
+            <mxPoint x="216" y="-1" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IO8795PvD08IkSDCkcih-27" value="Calculate the correct Orientation to reach each Point" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="102" y="-31" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

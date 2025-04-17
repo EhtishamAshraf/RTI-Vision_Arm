@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" version="26.2.12">
+  <diagram name="Page-1" id="bQ_VBY3OAiIYYnFE13Zi">
+    <mxGraphModel dx="610" dy="320" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-1" value="Choose an&amp;nbsp;arbitrary Pose" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="118" y="73" width="115" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-7" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ggl8Nizo90f3ZOnRybTL-2" target="ggl8Nizo90f3ZOnRybTL-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-2" value="Compute distance from current to all other Poses" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="116.75" y="128" width="117.5" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-9" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="ggl8Nizo90f3ZOnRybTL-3" target="ggl8Nizo90f3ZOnRybTL-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-3" value="Choose closest Pose based on distance" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="115.5" y="191" width="120" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-11" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="ggl8Nizo90f3ZOnRybTL-4" target="ggl8Nizo90f3ZOnRybTL-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-4" value="Set the new pose as the current pose" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="115.5" y="246" width="120" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-6" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ggl8Nizo90f3ZOnRybTL-1" target="ggl8Nizo90f3ZOnRybTL-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="175" y="225" as="sourcePoint" />
+            <mxPoint x="225" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-8" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="ggl8Nizo90f3ZOnRybTL-3" target="ggl8Nizo90f3ZOnRybTL-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-13" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="ggl8Nizo90f3ZOnRybTL-10" target="ggl8Nizo90f3ZOnRybTL-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-10" value="Have&amp;nbsp;&lt;div&gt;all poses been visited?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="127" y="300" width="97" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-12" value="Stop the Search" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="256" y="330.5" width="105" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-14" value="&lt;b&gt;YES&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="210" y="314" width="50" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-16" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ggl8Nizo90f3ZOnRybTL-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="149" y="258" as="sourcePoint" />
+            <mxPoint x="176" y="110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="3" y="359" />
+              <mxPoint x="112" y="221" />
+              <mxPoint x="-2" y="93" />
+              <mxPoint x="91" y="115" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ggl8Nizo90f3ZOnRybTL-17" value="&lt;b&gt;NO&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="76.5" y="317.5" width="42" height="31" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

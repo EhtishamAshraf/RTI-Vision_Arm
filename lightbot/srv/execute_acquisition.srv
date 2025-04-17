@@ -1,0 +1,3 @@
+# service to acquire image data
+---
+bool acquisition_command_received_successfully

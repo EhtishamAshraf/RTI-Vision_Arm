@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+<robot name="eva_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find eva_description)/urdf/eva_without_rail.gazebo" /> 
+
+  <link name="world"/> 
+
+  <link
+    name="base_link">
+    <gravity>0</gravity>
+    <inertial>
+      <origin
+        xyz="-0.00079256 0.072247 -4.2906E-06"
+        rpy="0 0 0" />
+      <mass
+        value="2.2163" />
+      <inertia
+        ixx="0.0065308"
+        ixy="-2.9126E-05"
+        ixz="-1.2386E-06"
+        iyy="0.0051738"
+        iyz="-5.4387E-07"
+        izz="0.0065939" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>  
+
+  <joint
+    name="world_to_base_link"
+    type="fixed">
+    <origin
+      xyz="-0.145 -2.35 1.8795"
+      rpy="0 0 0" />
+    <parent
+      link="world" />
+    <child
+      link="base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+  <link
+    name="link1">
+    <gravity>0</gravity>
+    <inertial>
+      <origin
+        xyz="0.033792 0.10158 0.028608"
+        rpy="0 0 0" />
+      <mass
+        value="1.3679" />
+      <inertia
+        ixx="0.0024595"
+        ixy="-0.0008869"
+        ixz="-0.00013245"
+        iyy="0.0021904"
+        iyz="-0.00017806"
+        izz="0.00385" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="joint01"
+    type="revolute">
+    <origin
+      xyz="0 0 0.151"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.12414"
+      upper="3.12414"
+      effort="100"
+      velocity="2.16" />
+    <dynamics damping="0.8" friction="10"/>
+  </joint>
+
+  <link
+    name="link2">
+    <gravity>0</gravity>
+    <inertial>
+      <origin
+        xyz="-0.011054 0.095532 -0.041105"
+        rpy="0 0 0" />
+      <mass
+        value="2.1464" />
+      <inertia
+        ixx="0.019567"
+        ixy="0.00037463"
+        ixz="0.00015985"
+        iyy="0.0033754"
+        iyz="-7.8572E-05"
+        izz="0.021425" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="joint12"
+    type="revolute">
+    <origin
+      xyz="0.056 0.1323 0"
+      rpy="0 0 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.70526"
+      upper="1.22173"
+      effort="150"
+      velocity="1.0" />
+    <dynamics damping="0.8" friction="10"/>
+  </joint>
+
+  <link
+    name="link3">
+    <gravity>0</gravity>
+    <inertial>
+      <origin
+        xyz="-0.017599 0.021043 0.028835"
+        rpy="0 0 0" />
+      <mass
+        value="1.0412" />
+      <inertia
+        ixx="0.0014019"
+        ixy="0.0004906"
+        ixz="-9.7827E-05"
+        iyy="0.0013971"
+        iyz="0.00010907"
+        izz="0.0022277" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="joint23"
+    type="revolute">
+    <origin
+      xyz="0 0.205 0"
+      rpy="0 0 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.79253"
+      upper="0.785398"
+      effort="100"
+      velocity="1" />
+    <dynamics damping="0.8" friction="10"/>
+  </joint>
+  <link
+    name="link4">
+    <gravity>0</gravity>
+    <inertial>
+      <origin
+        xyz="6.3485E-05 0.082453 -0.0083688"
+        rpy="0 0 0" />
+      <mass
+        value="1.2151" />
+      <inertia
+        ixx="0.0030376"
+        ixy="-7.1559E-06"
+        ixz="8.224E-07"
+        iyy="0.0010632"
+        iyz="0.00042179"
+        izz="0.0034635" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="joint34"
+    type="revolute">
+    <origin
+      xyz="-0.056 0.09401 0"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.12414"
+      upper="3.12414"
+      effort="30"
+      velocity="1" />
+    <dynamics damping="0.8" friction="10"/>
+  </joint>
+
+  <link
+    name="link5">
+    <gravity>0</gravity>
+    <inertial>
+      <origin
+        xyz="0.033633 0.0068289 0.0038977"
+        rpy="0 0 0" />
+      <mass
+        value="1.1633" />
+      <inertia
+        ixx="0.0014093"
+        ixy="-7.9912E-05"
+        ixz="1.6075E-05"
+        iyy="0.00064393"
+        iyz="7.6612E-06"
+        izz="0.0012682" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="joint45"
+    type="revolute">
+    <origin
+      xyz="0 0.1966 0"
+      rpy="0 0 0" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.174533"
+      upper="2.70526"      
+      effort="45"
+      velocity="1" />
+    <dynamics damping="0.8" friction="10"/>
+  </joint>
+
+  <link
+    name="link6">
+    <gravity>0</gravity>
+    <inertial>
+      <origin
+        xyz="0.00010738 0.012024 3.1104E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.089988" />
+      <inertia
+        ixx="3.1549E-05"
+        ixy="9.9188E-08"
+        ixz="-3.6831E-08"
+        iyy="5.6401E-05"
+        iyz="-1.5979E-09"
+        izz="3.1789E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_description/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="joint56"
+    type="revolute">
+    <origin
+      xyz="0.065 0.0741 0"
+      rpy="0 0 0" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.12414"
+      upper="3.12414"
+      effort="30"
+      velocity="1" />
+    <dynamics damping="0.8" friction="10"/>
+  </joint>
+
+  <link
+    name="light_link">
+    <gravity>0</gravity>
+    <inertial>
+      <origin
+        xyz="0.000 0.0 0.0"
+        rpy="0 0 0" />
+      <mass
+        value="0.089988" />
+      <inertia
+        ixx="3.1549E-05"
+        ixy="9.9188E-08"
+        ixz="-3.6831E-08"
+        iyy="5.6401E-05"
+        iyz="-1.5979E-09"
+        izz="3.1789E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+          <!-- filename="package://eva_description/meshes/light_assembly.STL" /> -->
+          <mesh
+          filename="package://eva_description/meshes/Led_plate_assembly.STL" 
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+          <!-- filename="package://eva_description/meshes/light_assembly.STL" /> -->
+          <mesh
+          filename="package://eva_description/meshes/Led_plate_assembly.STL" 
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="joint67" type="fixed">
+    <!-- <origin xyz="0.12 0.025 -0.0325" rpy="-${pi/2} ${pi} 0.0" /> -->
+    <origin xyz="-0.025 0.028 0.025" rpy="-${pi/2} 0.0 0.0" />
+    <parent link="link6" />
+    <child link="light_link" />    
+  </joint>
+
+  <link name="ee_link"> 
+  </link>
+
+  <joint name="ee_link_joint" type="fixed">
+    <origin xyz="0.11 0.025 0.06" rpy="-${pi/2} ${pi} 0"/>
+    <!-- <origin xyz="0.05 0.03 0.175" rpy="-${pi/2} ${pi} 0.0"/> -->
+    <parent link="light_link"/>
+    <child link="ee_link"/>
+  </joint>
+
+</robot>

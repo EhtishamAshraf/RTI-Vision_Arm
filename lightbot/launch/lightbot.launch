@@ -1,0 +1,5 @@
+<launch>
+  <node name="lightbot" pkg="lightbot" type="main.py" output="screen">
+    <param name="robot_driver_server_name" type="str" value="eva_driver" />    
+  </node>
+</launch>

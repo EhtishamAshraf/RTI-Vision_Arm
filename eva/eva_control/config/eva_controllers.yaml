@@ -1,0 +1,53 @@
+# This file is used for simulating Eva Robotic Arm and the XY Plotter in Rviz and Gazebo
+eva:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: &loop_hz 125  # Publish joint states at 125 Hz
+
+  arm_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints: &robot_joints
+      - joint01
+      - joint12
+      - joint23
+      - joint34
+      - joint45
+      - joint56
+    gains:      # PID gains for each joint
+      joint01: {p: 200,  d: 1.0, i: 0.1, i_clamp: 1}
+      joint12: {p: 200, d: 1.0, i: 0.1, i_clamp: 1}
+      joint23: {p: 200,  d: 1.0,  i: 0.1, i_clamp: 1}
+      joint34: {p: 200,   d: 1.0,   i: 0.1, i_clamp: 1}
+      joint45: {p: 200,   d: 1.0,   i: 0.1, i_clamp: 1}
+      joint56: {p: 200,    d: 1.0, i: 0.1, i_clamp: 1}
+    constraints:
+      goal_time: 0.6  # Time to reach the goal
+      stopped_velocity_tolerance: 0.05  # Tolerance for stopping
+      joint01: {trajectory: 0.1, goal: 0.1}  # Trajectory and goal constraints
+      joint12: {trajectory: 0.1, goal: 0.1}
+      joint23: {trajectory: 0.1, goal: 0.1}
+      joint34: {trajectory: 0.1, goal: 0.1}
+      joint45: {trajectory: 0.1, goal: 0.1}
+      joint56: {trajectory: 0.1, goal: 0.1}
+    stop_trajectory_duration: 0.5  # Time to stop the trajectory
+    state_publish_rate: *loop_hz  # Publish controller state at 125 Hz
+    action_monitor_rate: 10  # Monitor action goals at 10 Hz
+
+  joint_group_eff_controller:
+    type: effort_controllers/JointGroupEffortController
+    joints: *robot_joints  # Use the same joints as the trajectory controller
+
+  
+  # Below are the controllers for the XY platform only
+  
+  # X-axis Controller (for both links)  --- XY platform
+  base_to_slider_joint_position_controller:
+      type: position_controllers/JointPositionController
+      joint: base_to_slider_joint
+      pid: {p: 1.0, i: 0.0, d: 0.0}
+
+  # Y-axis Controller (for both links)  ---XY platform
+  slider_to_second_joint_position_controller:
+      type: position_controllers/JointPositionController
+      joint: slider_to_second_joint
+      pid: {p: 1.0, i: 0.0, d: 0.0}

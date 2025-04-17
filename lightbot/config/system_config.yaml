@@ -1,0 +1,6 @@
+robot_live: true  # change to true when working with Real Eva arm and false when working without Eva arm
+ros_solution: true 
+xy_platform_x_calibration: 83.333333
+xy_platform_y_calibration: 83.333333
+display_image_width_scale_down_percentage: 35
+display_image_height_scale_down_percentage: 35

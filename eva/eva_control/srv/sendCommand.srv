@@ -1,0 +1,7 @@
+# Service for moving the robotic arm to a target pose using ROS
+float32[] target_pose
+bool trigger_signal
+bool ros_solution
+---
+bool successful
+string error

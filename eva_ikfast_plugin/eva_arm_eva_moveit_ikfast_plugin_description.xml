@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<library path="lib/libeva_arm_eva_moveit_ikfast_plugin">
+  <class base_class_type="kinematics::KinematicsBase" name="eva_arm_eva/IKFastKinematicsPlugin" type="eva_arm_eva::IKFastKinematicsPlugin">
+    <description>IKFast61 plugin for closed-form kinematics of eva_arm eva</description>
+  </class>
+</library>

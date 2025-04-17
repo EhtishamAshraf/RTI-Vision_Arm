@@ -1,0 +1,30 @@
+# This is action definition for eva_ros_control_server.py (comment/uncomment as required):
+#goal definition
+geometry_msgs/PoseStamped target_pose
+std_msgs/Bool trigger_signal
+---
+#result definition
+geometry_msgs/PoseStamped actual_acquired_pose
+std_msgs/Bool succeeded
+std_msgs/Bool system_err
+---
+#feedback
+bool success
+
+
+
+# # This is action definition for eva_sdk_control_server.py (comment/uncomment as required):
+# #goal definition
+# sensor_msgs/JointState target_pose
+# std_msgs/Bool trigger_signal
+# ---
+# #result definition
+# sensor_msgs/JointState actual_acquired_pose
+# std_msgs/Bool succeeded
+# std_msgs/Bool system_err
+# ---
+# #feedback
+# bool success
+
+
+

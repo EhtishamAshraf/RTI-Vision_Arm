@@ -1,0 +1,12 @@
+controller_list:
+  - name: eva/arm_controller            # Name of the controller
+    action_ns: follow_joint_trajectory  # Action server namespace
+    type: FollowJointTrajectory         # Type of controller
+    default: true  # Start this controller by default
+    joints:        # List of joints controlled by this controller
+      - joint01
+      - joint12
+      - joint23
+      - joint34
+      - joint45
+      - joint56

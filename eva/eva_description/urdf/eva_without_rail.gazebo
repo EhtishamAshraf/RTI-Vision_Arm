@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<robot>
+
+  <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/eva</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+
+  <!-- all the links of the robotic arm -->
+  <gazebo reference="link1">
+    <mu1>0.5</mu1>
+    <mu2>0.5</mu2>  
+        
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="link2">
+    <mu1>0.5</mu1>
+    <mu2>0.5</mu2>   
+    
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="link3">
+    <mu1>0.5</mu1>
+    <mu2>0.5</mu2>   
+    
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="link4">
+    <mu1>0.5</mu1>
+    <mu2>0.5</mu2>    
+      
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="link5">
+    <mu1>0.5</mu1>
+    <mu2>0.5</mu2>  
+     
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="link6">
+    <mu1>0.5</mu1>
+    <mu2>0.5</mu2> 
+      
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <!-- controllers for the robotic arm -->
+  <transmission name="trans_joint01">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint01">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint01_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="trans_joint12">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint12">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint12_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="trans_joint23">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint23">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint23_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="trans_joint34">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint34">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint34_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="trans_joint45">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint45">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint45_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="trans_joint56">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint56">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint56_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+</robot>

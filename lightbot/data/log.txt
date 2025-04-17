@@ -1,0 +1,8 @@
+New Acquisition @ 2025-04-11 13:39:11.558359
+Nb of LPs reached: 91, Nb of LPs not reachable: 29
+New Acquisition @ 2025-04-11 16:37:09.543284
+Nb of LPs reached: 24, Nb of LPs not reachable: 6
+New Acquisition @ 2025-04-11 16:46:26.104243
+Nb of LPs reached: 22, Nb of LPs not reachable: 8
+
+

@@ -1,0 +1,65 @@
+<!-- This file is used for simulating Eva Robotic Arm and the XY Plotter in Rviz and Gazebo -->
+
+<launch>
+
+    <!-- Associate to the robot description parameter, the urdf file that model the robot-->
+    <param name="robot_description" textfile="$(find eva_description)/urdf/eva_xyplotter_box.urdf" />
+    
+    <!-- Set the position in empty world-->
+    <arg name="x" default="0.0" />
+    <arg name="y" default="0.0" />
+    <arg name="z" default="0.0" />
+
+    <!-- Launch Gezabo world in paused - remember to unpause the simulation to continue-->
+    <include file = "$(find gazebo_ros)/launch/empty_world.launch" >
+        <arg name="use_sim_time" value="true"/>
+        <arg name="debug" value="false"/>
+        <arg name="gui" value="true"/>
+        <arg name="paused" value="true" />
+    </include>   
+
+    <!-- Spawn the robot using the package gazebo_ros-->
+    <node name="spawn_the_robot" pkg="gazebo_ros" type="spawn_model"  output="screen" args="-urdf -param robot_description -model eva -x $(arg x) -y $(arg y) -z $(arg z)" />
+    
+    <!-- Load joint controller configurations from YAML file to parameter server -->
+    <rosparam file="$(find eva_control)/config/eva_controllers.yaml" command="load"/>
+
+     <!-- Load the node controller manager-->
+    <node name="controller_spawner" pkg="controller_manager" type="spawner"  
+            output="screen" respawn="false" ns="/eva"
+            args="joint_state_controller
+                arm_controller
+                base_to_slider_joint_position_controller 
+                slider_to_second_joint_position_controller
+                --timeout 60 ">        
+    </node>
+
+    <!-- Convert joint states to TF transform for rviz and rqt-->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  
+            output="screen" respawn="false">
+            <remap from="/joint_states" to="/eva/joint_states"/>
+    </node>
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <remap from="/joint_states" to="/eva/joint_states"/>
+
+    <!-- Use moveit for motion planning -->
+    <include file= "$(find sim_eva_without_rail_moveit_config)/launch/planning_context.launch" >
+        <arg name="load_robot_description" value="false" />
+    </include>
+
+    <include file= "$(find sim_eva_without_rail_moveit_config)/launch/move_group.launch" >
+        <arg name="publish_monitored_planning_scene" value="true" />
+    </include>
+
+    <include file= "$(find sim_eva_without_rail_moveit_config)/launch/moveit_rviz.launch" >
+        <arg name="rviz_config" value="$(find sim_eva_without_rail_moveit_config)/launch/moveit.rviz" />
+    </include>
+
+    <!-- node to control the xy_platform in gazebo -->
+    <node name="xy_platform_controller" pkg="xy_platform_control" type="xy_platform_controller.py" output="screen"/>
+    
+    <!-- node to control the eva_arm in gazebo using "moveit" -->
+    <node name="moveit_IK" pkg="eva_control" type="eva_moveit_IK.py" output="screen"/>
+
+</launch>

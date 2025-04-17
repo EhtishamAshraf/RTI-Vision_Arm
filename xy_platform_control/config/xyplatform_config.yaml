@@ -1,0 +1,3 @@
+# config file for hardware of xy plotter:
+xy_platform_x_calibration: 83.333333
+xy_platform_y_calibration: 83.333333

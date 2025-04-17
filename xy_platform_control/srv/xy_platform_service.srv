@@ -1,0 +1,5 @@
+# Using a custom service to control the Hardware of XY Plotter to reach a specific position:
+float32 target_position
+bool target_axis
+---
+bool successfully_displaced

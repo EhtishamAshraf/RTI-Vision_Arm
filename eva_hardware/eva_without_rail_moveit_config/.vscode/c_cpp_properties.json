@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/esirem/Desktop/M2_Thesis/4-RTI_Bot/eva_rti_ws/devel/include/**",
+        "/home/esirem/Desktop/M2_Thesis/4-Team_repo/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/esirem/Desktop/M2_Thesis/4-RTI_Bot/eva_rti_ws/src/camera/avt_vimba_camera/include/**",
+        "/home/esirem/Desktop/M2_Thesis/4-RTI_Bot/eva_rti_ws/src/eva_ikfast_plugin/include/**",
+        "/home/esirem/Desktop/M2_Thesis/4-Team_repo/catkin_ws/src/imvia-main/kinova-ros-master/kinova_moveit/inverse_kinematics_plugins/ikfast/j2n6s300_ikfast/include/**",
+        "/home/esirem/Desktop/M2_Thesis/4-Team_repo/catkin_ws/src/imvia-main/kinova-ros-master/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/include/**",
+        "/home/esirem/Desktop/M2_Thesis/4-Team_repo/catkin_ws/src/imvia-main/kinova-ros-master/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s7s300_ikfast/include/**",
+        "/home/esirem/Desktop/M2_Thesis/4-Team_repo/catkin_ws/src/imvia-main/kinova-ros-master/kinova_moveit/kinova_arm_moveit_demo/include/**",
+        "/home/esirem/Desktop/M2_Thesis/4-Team_repo/catkin_ws/src/imvia-main/kinova-ros-master/kinova_driver/include/**",
+        "/home/esirem/Desktop/M2_Thesis/4-Team_repo/catkin_ws/src/imvia-main/kinova-ros-master/kinova_moveit/inverse_kinematics_plugins/ikfast/m1n6s300_ikfast/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
