@@ -17,3 +17,4 @@ gnome-terminal --tab --title="Lightbot" -- bash -c "$SOURCE_CMD; sleep 50; rosla
 gnome-terminal --tab --title="LightBot Client" -- bash -c "sleep 55; python3 /home/esirem/Desktop/M2_Thesis/4-RTI_Bot/eva_rti_ws/src/lightbot/scripts/sample_client.py; bash"
 
 echo "All nodes launched successfully in separate tabs!"
+echo "Please check the terminal tabs for any errors or messages."
