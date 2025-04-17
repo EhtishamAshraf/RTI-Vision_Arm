@@ -3,10 +3,7 @@
 """
 ROS node to read image data from the /camera/image_mono topic and adding a bounding box on the object.
 
-
 Note: when running this node, the roslaunch avt_vimba_camera mono_camera.launch should be running in a separate terminal.
-
-
 """
 
 import rospy
