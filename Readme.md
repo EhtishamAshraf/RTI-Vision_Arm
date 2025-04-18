@@ -419,7 +419,7 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
   ![Greedy Search Image](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Flowcharts/GreedySearch.png)
 - The missed poses are turned RED in RVIZ by checking if the position of a marker is within 0.01 units of the target pose's position, to determine if it corresponds to a missed waypoint.
 
-Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,𝑧)∣≤ 0.01
+   Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,𝑧)∣≤ 0.01
 - The current setup defines **semi-circular (Theta (θ): -70° to 58°) and semi-spherical (Phi (ϕ): 65° to 0°, and Theta (θ): -60° to 35°) light poses** around the object.
 - **Circular waypoints**
 
@@ -465,7 +465,7 @@ Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,
    While above formulas resemble standard spherical coordinate equations, there is 
    an intentional deviation in the definition of the angle 𝜙.
 
-   Standard (Literature) Convention:
+   _Standard (Literature) Convention:_
 
    👉 Refer for lit review: [Math Insight explanation of spherical coordinates](https://mathinsight.org/spherical_coordinates#:~:text=In%20summary%2C%20the%20formulas%20for,%CE%B8z%3D%CF%81cos%CF%95)
   
@@ -476,13 +476,13 @@ Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,
    In this form, ϕ is the angle from the positive Z-axis, measured downward toward 
    the vector ρ.
 
-In current Implementation:
+   _In current Implementation:_
 
    𝜙 is instead defined as the angle from the XY-plane upward toward the vector ρ, 
    which causes the sine and cosine terms in the 𝑧 and 𝑥/𝑦 components to be 
    effectively swapped.
 
-🔍 This change in convention was made intentionally to simplify visualization and 
+    🔍 This change in convention was made intentionally to simplify visualization and 
    integration with Robotic Arm as it operate relative to the Ground Plane (XY).
    As in current setup, EVA is mounted on a table or ground, so the "base frame" 
    assumes:
