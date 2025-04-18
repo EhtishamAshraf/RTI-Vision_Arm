@@ -180,7 +180,7 @@ roslaunch eva_control spawn_gazebo_sim.launch
 ✅ Remember to manually unpause the simulation in the Gazebo GUI once everything is loaded.
 
 The demo demonstrates the Eva robotic arm autonomously reaching a specified pose using MoveIt, while simultaneously executing a predefined motion on the XY platform.
-![Demo in Action]([assets/demo.gif](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32471da8907243730529ba4688e61f91b32b88f7/assets/Videos/Evaarm_xyplatform.gif))
+![Demo in Action](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32471da8907243730529ba4688e61f91b32b88f7/assets/Videos/Evaarm_xyplatform.gif)
 
 ### Hardware 
 🔓 Remember to turn OFF the choreograph robot lock before running ROS nodes else arm won't move.
@@ -280,7 +280,7 @@ Provide real-time joint feedback.
     
 🎮 Controllers play a crucial role in simulating the platform. They take position commands and move the platform accordingly. This is similar to how a motor controller (e.g., L298N) operates, converting input commands into motor movements, allowing for precise control over the platform's position and movement.
 
-![Demo in Action]([assets/demo.gif](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Videos/xy_platform.gif))
+![Demo in Action](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Videos/xy_platform.gif)
 
 #### 2.   Hardware:
 ROS service (xy_platform_service.srv) is used to control the platform using ROS. 
