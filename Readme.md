@@ -418,6 +418,7 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
   
   ![Greedy Search Image](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Flowcharts/GreedySearch.png)
 - The missed poses are turned RED in RVIZ by checking if the position of a marker is within 0.01 units of the target pose's position, to determine if it corresponds to a missed waypoint.
+
 Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,𝑧)∣≤ 0.01
 - The current setup defines **semi-circular (Theta (θ): -70° to 58°) and semi-spherical (Phi (ϕ): 65° to 0°, and Theta (θ): -60° to 35°) light poses** around the object.
 - **Circular waypoints**
@@ -432,8 +433,11 @@ Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,
 
    Mathematically:
    x = x₀ + r · cos(θ)
+  
    y = y₀ + r · sin(θ)
+
    z = z₀
+  
 ![circular_points Visualization](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/polar_coordinates.png)
 > Code is available in src/assets/python_codes.
 - **Spherical waypoints**
@@ -446,22 +450,24 @@ Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,
 
    Mathematically:
     x = x₀ + ρ * math.cos(ϕ) * math.cos(θ)
+  
     y = y₀ + ρ * math.cos(ϕ) * math.sin(θ)
+
     z = z₀ +  ρ * math.sin(ϕ)  
 
    This positions each waypoint at a constant radial distance from the object, 
    distributed over a spherical surface defined by the varying angles 𝜃 and 𝜙.
 
-⚠️ Note on Convention Differences
+   ⚠️ Note on Convention Differences
 
    While above formulas resemble standard spherical coordinate equations, there is 
    an intentional deviation in the definition of the angle 𝜙.
 
-Standard (Literature) Convention:
+   Standard (Literature) Convention:
 
    👉 Refer for lit review: [Math Insight explanation of spherical coordinates](https://mathinsight.org/spherical_coordinates#:~:text=In%20summary%2C%20the%20formulas%20for,%CE%B8z%3D%CF%81cos%CF%95)
-   x = x₀ + ρsinϕcosθ 
-   y = y₀ + ρsinϕsinθ 
+   x = x₀ + ρsinϕcosθ,   
+   y = y₀ + ρsinϕsinθ,    
    z = z₀ + ρcosϕ
 
    In this form, ϕ is the angle from the positive Z-axis, measured downward toward 
