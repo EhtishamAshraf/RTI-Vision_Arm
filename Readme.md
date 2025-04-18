@@ -223,7 +223,7 @@ _LED Indicators for Home Position:_
 Two LEDs on the breadboard light up when the limit switches are triggered, indicating that the platform has reached the home position. These LEDs serve as visual indicators to confirm successful homing.
 
 The circuit diagram of the XY platform is shown below:
-![Fritzing Circuit](assets/spherical_light_poses.png)
+![Fritzing Circuit](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/d4266fffc10a6dda559f0b50dde19bb7580f351b/assets/Fritzing_Circuit/XY_Platform.png)
 
 Components used are:
 | Component              | Quantity |
@@ -309,7 +309,7 @@ rosrun xy_platform_control xy_platform_client.py
 # 📷 Vimba Camera
 The project makes use of a Vimba camera (from Allied Vision) to capture images of the object.
 
-![Vimba camera](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/camera.png)
+![Vimba camera](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/d4266fffc10a6dda559f0b50dde19bb7580f351b/assets/Images/camera_resized.png)
 
 ## ⚙️ Setting up the Camera:
 ### 🪟 Windows OS
@@ -534,7 +534,7 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
 
 ![Direction Vector Tilt](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/direction_vector_1.png)
 
- *Aligning the Direction Vector:*
+   *Aligning the Direction Vector:*
 
    Since the default forward direction of the End-Effector (EE) is along the Y-axis, we align the Y- 
    axis with the tilted direction vector to achieve the desired rotation. Once we find the rotation, 
@@ -559,7 +559,7 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
 | **-10°**    | 6                  | 28                   |
 | **-20°**    | 8                  | 29                   |
 
-- **Acquired Data Visualization from Lightbot**
+### Acquired Data Visualization from Lightbot
 
    The images below show the actual acquisition data collected from the Lightbot. Notice the 
    significant changes based on variations in the theta and phi parameters:
