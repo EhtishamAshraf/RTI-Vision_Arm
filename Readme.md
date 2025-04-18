@@ -534,14 +534,13 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
 
 ![Direction Vector Tilt](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/direction_vector_1.png)
 
-   *Aligning the Direction Vector:*
+      *Aligning the Direction Vector:*
 
-   Since the default forward direction of the End-Effector (EE) is along the Y-axis, we align the Y- 
-   axis with the tilted direction vector to achieve the desired rotation. Once we find the rotation, 
-   we convert it into a quaternion to represent the final orientation.
+      Since the default forward direction of the End-Effector (EE) is along the Y-axis, we align the Y- 
+      axis with the tilted direction vector to achieve the desired rotation. Once we find the rotation, 
+      we convert it into a quaternion to represent the final orientation.
 
-   This gives us the desired light pose orientation that is aligned with the new downward-tilted 
-   direction. 
+      This gives us the desired light pose orientation that is aligned with the new downward-tilted direction. 
 ![Direction Vector ALignment](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/direction_vector_2.png)
 
 > Code is available in src/assets/python_codes.
