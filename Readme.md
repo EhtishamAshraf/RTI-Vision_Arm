@@ -106,7 +106,7 @@ The robotic arm can be controlled in a few differnt ways:
 
 > 🧠 Before controlling with ROS, it's better to control with Choreograph and EvaSDK.
 
-![Eva Manual Image](assets/Eva_man.jpg)
+![Eva Manual Image](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32471da8907243730529ba4688e61f91b32b88f7/assets/Images/evs_jointlimits.png)
 
 ### 🤖 Accessing and Controlling the Eva Robot via Choreograph
 
@@ -120,7 +120,7 @@ Assuming all hardware connections are set up as described earlier:
 6. The physical Eva robotic arm will execute movements precisely as defined in the selected toolpath.
 
 🖼️ Take a look at the image below to get familiar with the Choreograph interface.
-![Choreograph Interface]()
+![Choreograph Interface](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32471da8907243730529ba4688e61f91b32b88f7/assets/Images/choreograph.png)
 
 🛠️ **Want to create your own toolpaths?** 
 
@@ -180,7 +180,7 @@ roslaunch eva_control spawn_gazebo_sim.launch
 ✅ Remember to manually unpause the simulation in the Gazebo GUI once everything is loaded.
 
 The demo demonstrates the Eva robotic arm autonomously reaching a specified pose using MoveIt, while simultaneously executing a predefined motion on the XY platform.
-![Demo in Action](assets/demo.gif)
+![Demo in Action]([assets/demo.gif](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32471da8907243730529ba4688e61f91b32b88f7/assets/Videos/Evaarm_xyplatform.gif))
 
 ### Hardware 
 🔓 Remember to turn OFF the choreograph robot lock before running ROS nodes else arm won't move.
@@ -207,21 +207,22 @@ Here's an overview of the core components involved:
 
 The following image illustrates the light poses arranged in a circular ring around the object.
 
-![Circular Light Poses](assets/circular_light_poses.png)
+![Circular Light Poses]([assets/circular_light_poses.png](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32471da8907243730529ba4688e61f91b32b88f7/assets/Images/circular_lightposes.png))
 
 The following image shows the light poses distributed in a spherical configuration around the object.
 
-![Spherical Light Poses](assets/spherical_light_poses.png)
+![Spherical Light Poses](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/spherical_lightposes_1.png)
 
 ---
 
 # ↔️↕️ XY Platform
 An XY platform is used to position objects precisely beneath vimba camera for inspection. The platform operates using two stepper motors that control horizontal (X-axis) and vertical (Y-axis) movements. These motors are driven by a TB6600 motor driver and controlled via an Arduino Uno, providing accurate and repeatable motion control essential for the task.
+
 _LED Indicators for Home Position:_
 Two LEDs on the breadboard light up when the limit switches are triggered, indicating that the platform has reached the home position. These LEDs serve as visual indicators to confirm successful homing.
 
 The circuit diagram of the XY platform is shown below:
-![Fritzing Circuit](assets/spherical_light_poses.png)
+![Fritzing Circuit](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Fritzing_Circuit/XY_Platform.png)
 
 Components used are:
 | Component              | Quantity |
@@ -278,7 +279,7 @@ Provide real-time joint feedback.
     
 🎮 Controllers play a crucial role in simulating the platform. They take position commands and move the platform accordingly. This is similar to how a motor controller (e.g., L298N) operates, converting input commands into motor movements, allowing for precise control over the platform's position and movement.
 
-![Demo in Action](assets/demo.gif)
+![Demo in Action]([assets/demo.gif](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Videos/xy_platform.gif))
 
 #### 2.   Hardware:
 ROS service (xy_platform_service.srv) is used to control the platform using ROS. 
@@ -300,14 +301,14 @@ rosrun xy_platform_control xy_platform_client.py
 -   Finally, it publishes the updated X position or Y position to the ROS topic.
 
 🖼️ Below is an image of the used XY Platform:
-![platform](images/platform.jpg)
+![platform](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/xy_Platform.png)
 
 ---
 
 # 📷 Vimba Camera
 The project makes use of a Vimba camera (from Allied Vision) to capture images of the object.
 
-![Vimba camera](assets/xy_platform.jpg)
+![Vimba camera](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/camera.png)
 
 ## ⚙️ Setting up the Camera:
 ### 🪟 Windows OS
@@ -329,7 +330,7 @@ Persistent; and execute IP Configuration Apply command.
 
 4. In the first window (from Step: 2), Find "Force IP" from the left bar, and click on it. Fill in all the details as shown below and click Send. This will change the current IP address of the camera. **Note:** It won't be a permanent change untill you set the Persistent IP address as explained in Step:3.
 
-![Vimba Window Setup](assets/xy_platform.jpg)
+![Vimba Window Setup](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/vimba_camera_Windows.png)
 
 ### 🐧 Linux OS
 Before proceeding, make sure all the steps in the Windows OS section are completed successfully.
@@ -361,7 +362,7 @@ python3 camera.py
    
 7. And in the newly opened windown, Click on **Freerun** button and you should be able to get the live feed from the camera.
 
-![Vimba Window Setup](assets/xy_platform.jpg)
+![Vimba Ubuntu Setup](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/vimba_camera_Ubuntu.png)
 
 🔭 **Image Acquisition**
 
@@ -393,7 +394,7 @@ rosrun avt_vimba_camera Bbox_vimba.py
 ```
 
 🖼️ Below is an image captured with the Vimba camera:
-![Vimba Image](images/eva_arm_demo.jpg)
+![Vimba Image](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/captured_image_resized.jpg)
 
 ---
 ## 🧠 Key Insights & Notes
@@ -404,7 +405,7 @@ rosrun avt_vimba_camera Bbox_vimba.py
 - In the current setup, only the **first and last waypoints** generated by MoveIt are sent to the real Eva arm to avoid **jerky movements**.
 - The **object’s position** is defined **relative to the world coordinate frame**.
 Below is the visualization of the world as displayed in the TF frame from RViz.
-![World Visualization](assets/world_visualization.png)
+![World Visualization](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/world_frame.png)
 - Interpolation between waypoints was attempted but did **not result in smoother motion**.
 - After data acquisition, the **Eva arm returns to its Home position**.
 - On startup, the **XY platform first homes itself**, then moves beneath the camera for image acquisition.
@@ -412,7 +413,7 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
 - The current camera used is **monochromatic**, meaning it captures images in grayscale only.
 - Calibration is crucial for ensuring that the camera’s intrinsic parameters, such as focal length, optical center, and distortion coefficients, are accurate. For example, in the case of the Vimba camera, the calibration file (calibration_50-0503343289.yaml) is used to load these parameters, which are essential for accurate image processing, undistortion, and proper camera pose estimation.
 - A **greedy search algorithm** is implemented to prioritize the **nearest light poses**, optimizing execution time.
-  ![Greedy Search Image](images/eva_arm_demo.jpg)
+  ![Greedy Search Image](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Flowcharts/GreedySearch.png)
 - The missed poses are turned RED in RVIZ by checking if the position of a marker is within 0.01 units of the target pose's position, to determine if it corresponds to a missed waypoint.
 Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,𝑧)∣≤ 0.01
 - The current setup defines **semi-circular (Theta (θ): -70° to 58°) and semi-spherical (Phi (ϕ): 65° to 0°, and Theta (θ): -60° to 35°) light poses** around the object.
@@ -430,7 +431,7 @@ Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,
    x = x₀ + r · cos(θ)
    y = y₀ + r · sin(θ)
    z = z₀
-![circular_points Visualization](assets/world_visualization.png)
+![circular_points Visualization](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/polar_coordinates.png)
 > Code is available in src/assets/python_codes.
 - **Spherical waypoints**
 
@@ -488,37 +489,14 @@ Defining ϕ as an angle from the XY-plane:
    downward (as in the math literature).
 
 
-![spherical_points Visualization](assets/world_visualization.png)
+![spherical_points Visualization](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/spherical_coordinates.png)
 > Code is available in src/assets/python_codes.
 
 - Y-axis is the default forward axis for the end effector, meaning that the direction along the Y-axis is considered the "forward" or "front" direction of the end effector. To ensure the correct orientation for pointing light at the object, we align the end effector's Y-axis with the direction vector.
-![Y-axis Visualization](assets/world_visualization.png)
+![Y-axis Visualization](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/EE_Axis_1.png)
 
 > In RVIZ: X-axis is represented by Red | Y-axis by Green | Z-axis by Blue
-> The Y-axis is defined as the forward axis in the current setup, but it can vary in the URDF/Xacro file depending on the Roll, Pitch, and Yaw (RPY) values of the joints, starting from the world frame to the end effector link.
-
-- **Light Pose Orientation:**
-
-  The direction vector can be found by taking the difference between the 
-  object's position (x₀, y₀, z₀) and the waypoint's position.
-
-  direction = [x₀ - xg, y₀ - yg, z₀ - zg]
-
-  To rotate direction vector downward in 3D space, we need to find the 
-  axis (of rotation) that is perpendicular to both the current direction 
-  vector and the Z-axis (as the requirement is to tilt the vector 
-  downward, meaning the vertical (Z) component will be changed 
-  slightly, making the vector "look" lower).
-
-* The cross product of the direction vector and Z-axis will give us the 
-  axis of rotation. 
-![Direction Vector Tilt](assets/world_visualization.png)
-
-  As the default forward direction of the EE is along the Y-axis so we 
-  align the Y-axis with the tilted direction vector to get the rotation 
-  and from rotation we find the orientation in quaternion.
-
-![Direction Vector ALignment](assets/world_visualization.png)
+> The Y-axis is defined as the forward axis in the current setup, but it can vary in the URDF/Xacro file depending on the Roll, Pitch, and Yaw (RPY) values of the joints, starting from the base_link frame to the end effector link.
 
 **Light Pose Orientation:**
 
@@ -538,14 +516,15 @@ Where `×` represents the cross product, and `axis` is the axis around which the
 
 **Note:** The rotation axis is perpendicular to both vectors `direction` and `Z-axis`, ensuring that we rotate around the correct axis to achieve the desired downward tilt.
 
-![Direction Vector Tilt](assets/world_visualization.png)
+![Direction Vector Tilt](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/direction_vector_1.png)
 
 **Aligning the Direction Vector:**
 
 Since the default forward direction of the End-Effector (EE) is along the Y-axis, we align the Y-axis with the tilted direction vector to achieve the desired rotation. Once we find the rotation, we convert it into a quaternion to represent the final orientation.
 
 This gives us the desired light pose orientation that is aligned with the new downward-tilted direction. 
-![Direction Vector Alignment](assets/world_visualization.png)
+![Direction Vector ALignment](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/direction_vector_2.png)
+
 > Code is available in src/assets/python_codes.
 
 - The system takes approximately 70 seconds for startup.
@@ -567,11 +546,11 @@ The images below show the actual acquisition data collected from the Lightbot. N
 
 Changing Theta (Phi Fixed):
     When phi is held constant and theta is varied, the result is shown in the image below:
-![theta_changed](images/eva_arm_demo.jpg)
+![theta_changed](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/lightpose_theta_changed.png)
 
 Changing Phi (Theta Fixed):
     When theta is kept constant and phi is varied, the resulting image is captured as follows:
-    ![phi changed](images/eva_arm_demo.jpg)
+    ![phi changed](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/lightpose_phi_changed.png)
 
 
 
