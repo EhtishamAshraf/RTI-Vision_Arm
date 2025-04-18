@@ -410,10 +410,12 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
 - Interpolation between waypoints was attempted but did **not result in smoother motion**.
 - After data acquisition, the **Eva arm returns to its Home position**.
 - On startup, the **XY platform first homes itself**, then moves beneath the camera for image acquisition.
-- 🛑 If you close the Vimba camera launch file and immediately rerun it, you might encounter an error. Wait a few seconds for the camera to restart.
+- 🛑 If you close the Vimba camera launch file and immediately rerun it, you might encounter an 
+     error. Wait a few seconds for the camera to restart.
 - The current camera used is **monochromatic**, meaning it captures images in grayscale only.
 - Calibration is crucial for ensuring that the camera’s intrinsic parameters, such as focal length, optical center, and distortion coefficients, are accurate. For example, in the case of the Vimba camera, the calibration file (calibration_50-0503343289.yaml) is used to load these parameters, which are essential for accurate image processing, undistortion, and proper camera pose estimation.
 - A **greedy search algorithm** is implemented to prioritize the **nearest light poses**, optimizing execution time.
+  
   ![Greedy Search Image](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Flowcharts/GreedySearch.png)
 - The missed poses are turned RED in RVIZ by checking if the position of a marker is within 0.01 units of the target pose's position, to determine if it corresponds to a missed waypoint.
 Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,𝑧)∣≤ 0.01
