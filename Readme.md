@@ -432,6 +432,7 @@ Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,
    the circular arc.
 
    Mathematically:
+  
    x = x₀ + r · cos(θ)
   
    y = y₀ + r · sin(θ)
@@ -449,6 +450,7 @@ Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,
    horizontal plane (XY-plane) — the waypoint's global position is computed as:
 
    Mathematically:
+  
     x = x₀ + ρ * math.cos(ϕ) * math.cos(θ)
   
     y = y₀ + ρ * math.cos(ϕ) * math.sin(θ)
@@ -466,6 +468,7 @@ Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,
    Standard (Literature) Convention:
 
    👉 Refer for lit review: [Math Insight explanation of spherical coordinates](https://mathinsight.org/spherical_coordinates#:~:text=In%20summary%2C%20the%20formulas%20for,%CE%B8z%3D%CF%81cos%CF%95)
+  
    x = x₀ + ρsinϕcosθ,   
    y = y₀ + ρsinϕsinθ,    
    z = z₀ + ρcosϕ
