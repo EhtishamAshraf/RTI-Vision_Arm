@@ -486,7 +486,7 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
    integration with Robotic Arm as it operate relative to the Ground Plane (XY).
    As in current setup, EVA is mounted on a table or ground, so the "base frame" 
    assumes:
-.   XY plane is the workspace (horizontal plane).
+    XY plane is the workspace (horizontal plane).
 
     Z axis is the height (vertical movement).
 
