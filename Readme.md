@@ -216,11 +216,14 @@ The following image shows the light poses distributed in a spherical configurati
 
 # ↔️↕️ XY Platform
 An XY platform is used to position objects precisely beneath vimba camera for inspection. The platform operates using two stepper motors that control horizontal (X-axis) and vertical (Y-axis) movements. These motors are driven by a TB6600 motor driver and controlled via an Arduino Uno, providing accurate and repeatable motion control essential for the task.
+
 _LED Indicators for Home Position:_
 Two LEDs on the breadboard light up when the limit switches are triggered, indicating that the platform has reached the home position. These LEDs serve as visual indicators to confirm successful homing.
 
 The circuit diagram of the XY platform is shown below:
 ![Fritzing Circuit](assets/spherical_light_poses.png)
+👉 [Stepper Motor configurations](https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000PAkPSAW&l=fr-FR) - 8-wire stepper motors can be wired in series for higher torque (as done in the current setup) but at the cost of lower speed.
+
 
 Components used are:
 | Component              | Quantity |
