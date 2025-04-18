@@ -60,7 +60,7 @@ catkin_make
 ```bash
 ./KillSystem.sh
 ```
-+ Make sure to update the path to the light_pos.lp file in both utilities.py and sample_client.py, and also modify the paths in the ./TurnOnSystem.sh script accordingly.
+⚡ Make sure to update the path to the light_pos.lp file in both utilities.py and sample_client.py, and also modify the paths in the ./TurnOnSystem.sh script accordingly.
 ---
 
 # 🌐 Wi-Fi Router
