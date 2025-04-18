@@ -488,7 +488,7 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
    assumes:
 .   XY plane is the workspace (horizontal plane).
 
-.   Z axis is the height (vertical movement).
+    Z axis is the height (vertical movement).
 
    _Defining ϕ as an angle from the XY-plane:_
 
