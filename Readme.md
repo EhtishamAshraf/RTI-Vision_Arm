@@ -4,7 +4,7 @@ It is a robotic inspection system that leverages a robotic arm as a dynamic ligh
 
 ##### 📺 Demo Video
 You can watch the demo video of the system in action by clicking on the below image:
-[![Watch the video](https://github.com/EhtishamAshraf/TurtleBotTrajControl_SMC/blob/7057946c40d2ec66b5d0790165a0b60bdfc86f61/2-Hardware_Data/Images/Robot_1.png)](https://youtu.be/8RlSMWvTJ8c)
+[![Watch the video](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/a27c84b9d5da47ba385bdb62a4be36443c20e0c3/assets/Images/RTIBot_system.png)](https://youtu.be/8RlSMWvTJ8c)
 
 ## 🔧 Hardware Components
 1. Eva Robotic Arm
@@ -69,7 +69,7 @@ To ensure smooth communication between all devices, it's important that the **ca
 > The communication is done because: Laptop, camera and robot are in the same subnet 
   (192.168.187.x/255.255.255.0).
 
-![Router used](assets/router_used.jpg)
+![Router used](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/a27c84b9d5da47ba385bdb62a4be36443c20e0c3/assets/Images/router.png)
 
 **Router Configuration**
 -   Logged into the router (TP-Link Archer MR500 Router) settings (192.168.1.1 initially).
@@ -85,7 +85,7 @@ Enter the IP Address and Network Mask manually, ensuring that the IP falls withi
 
 > The camera is configured to use 192.168.187.102.
 
-![Router Setup](assets/router_setup.jpg)
+![Router Setup](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/a27c84b9d5da47ba385bdb62a4be36443c20e0c3/assets/Images/router_setting.png)
 
 ---
 
