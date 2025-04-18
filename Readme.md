@@ -510,31 +510,38 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
 > In RVIZ: X-axis is represented by Red | Y-axis by Green | Z-axis by Blue
 > The Y-axis is defined as the forward axis in the current setup, but it can vary in the URDF/Xacro file depending on the Roll, Pitch, and Yaw (RPY) values of the joints, starting from the base_link frame to the end effector link.
 
-**Light Pose Orientation:**
+- **Light Pose Orientation:**
 
-The direction vector `direction` can be found by taking the difference between the object's position `(x₀, y₀, z₀)` and the waypoint's position `(xg, yg, zg)`:
+   The direction vector `direction` can be found by taking the difference between the object's       
+   position `(x₀, y₀, z₀)` and the waypoint's position `(xg, yg, zg)`:
 
-direction = [x₀ - xg, y₀ - yg, z₀ - zg]
+   direction = [x₀ - xg, y₀ - yg, z₀ - zg]
 
-To rotate the direction vector downward in 3D space, we need to find the axis of rotation that is perpendicular to both the current direction vector and the Z-axis (since the goal is to tilt the vector downward, i.e., modify the Z component to "look" lower).
+   To rotate the direction vector downward in 3D space, we need to find the axis of rotation that is 
+   perpendicular to both the current direction vector and the Z-axis (since the goal is to tilt the 
+   vector downward, i.e., modify the Z component to "look" lower).
 
-*Rotation Axis Calculation:*
+   *Rotation Axis Calculation:*
 
-The cross product of the direction vector and Z-axis will give us the axis of rotation:
+   The cross product of the direction vector and Z-axis will give us the axis of rotation:
 
-axis = direction × Z-axis
+   axis = direction × Z-axis
 
-Where `×` represents the cross product, and `axis` is the axis around which the rotation occurs.
+   Where `×` represents the cross product, and `axis` is the axis around which the rotation occurs.
 
-**Note:** The rotation axis is perpendicular to both vectors `direction` and `Z-axis`, ensuring that we rotate around the correct axis to achieve the desired downward tilt.
+   **Note:** The rotation axis is perpendicular to both vectors `direction` and `Z-axis`, ensuring 
+   that we rotate around the correct axis to achieve the desired downward tilt.
 
 ![Direction Vector Tilt](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/direction_vector_1.png)
 
-**Aligning the Direction Vector:**
+ *Aligning the Direction Vector:*
 
-Since the default forward direction of the End-Effector (EE) is along the Y-axis, we align the Y-axis with the tilted direction vector to achieve the desired rotation. Once we find the rotation, we convert it into a quaternion to represent the final orientation.
+   Since the default forward direction of the End-Effector (EE) is along the Y-axis, we align the Y- 
+   axis with the tilted direction vector to achieve the desired rotation. Once we find the rotation, 
+   we convert it into a quaternion to represent the final orientation.
 
-This gives us the desired light pose orientation that is aligned with the new downward-tilted direction. 
+   This gives us the desired light pose orientation that is aligned with the new downward-tilted 
+   direction. 
 ![Direction Vector ALignment](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/direction_vector_2.png)
 
 > Code is available in src/assets/python_codes.
@@ -554,16 +561,16 @@ This gives us the desired light pose orientation that is aligned with the new do
 
 - **Acquired Data Visualization from Lightbot**
 
-The images below show the actual acquisition data collected from the Lightbot. Notice the significant changes based on variations in the theta and phi parameters:
+   The images below show the actual acquisition data collected from the Lightbot. Notice the 
+   significant changes based on variations in the theta and phi parameters:
 
-Changing Theta (Phi Fixed):
+   Changing Theta (Phi Fixed):
     When phi is held constant and theta is varied, the result is shown in the image below:
 ![theta_changed](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/lightpose_theta_changed.png)
 
-Changing Phi (Theta Fixed):
+   Changing Phi (Theta Fixed):
     When theta is kept constant and phi is varied, the resulting image is captured as follows:
     ![phi changed](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/lightpose_phi_changed.png)
-
 
 
 ### 🧩 MoveIt Setup
