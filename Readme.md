@@ -1,6 +1,6 @@
 # 🤖🔦 RTI-Vision_Arm
 It is a robotic inspection system that leverages a robotic arm as a dynamic light source and a Vimba camera to analyze object appearances using Reflectance Transformation Imaging (RTI). Designed for precision, it features an XY moving platform to position objects accurately underneath the camera for detailed surface inspection.
-![Flowchart Image](images/eva_arm_demo.jpg)
+![Flowchart Image](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/f470cc14dfadbd00d28bf9a9b09034069bc50e7d/assets/Flowcharts/LightBot_Flowchart.png)
 
 ##### 📺 Demo Video
 You can watch the demo video of the system in action by clicking on the below image:
