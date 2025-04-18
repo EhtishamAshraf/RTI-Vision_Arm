@@ -490,7 +490,7 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
 
 .   Z axis is the height (vertical movement).
 
-Defining ϕ as an angle from the XY-plane:
+   _Defining ϕ as an angle from the XY-plane:_
 
    Means ϕ = 0° → arm moves horizontally outward.
 
