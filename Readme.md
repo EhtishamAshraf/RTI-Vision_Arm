@@ -207,7 +207,7 @@ Here's an overview of the core components involved:
 
 The following image illustrates the light poses arranged in a circular ring around the object.
 
-![Circular Light Poses]([assets/circular_light_poses.png](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32471da8907243730529ba4688e61f91b32b88f7/assets/Images/circular_lightposes.png))
+![Circular Light Poses](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32471da8907243730529ba4688e61f91b32b88f7/assets/Images/circular_lightposes.png)
 
 The following image shows the light poses distributed in a spherical configuration around the object.
 
@@ -219,6 +219,7 @@ The following image shows the light poses distributed in a spherical configurati
 An XY platform is used to position objects precisely beneath vimba camera for inspection. The platform operates using two stepper motors that control horizontal (X-axis) and vertical (Y-axis) movements. These motors are driven by a TB6600 motor driver and controlled via an Arduino Uno, providing accurate and repeatable motion control essential for the task.
 
 _LED Indicators for Home Position:_
+
 Two LEDs on the breadboard light up when the limit switches are triggered, indicating that the platform has reached the home position. These LEDs serve as visual indicators to confirm successful homing.
 
 The circuit diagram of the XY platform is shown below:
