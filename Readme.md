@@ -309,7 +309,7 @@ rosrun xy_platform_control xy_platform_client.py
 # 📷 Vimba Camera
 The project makes use of a Vimba camera (from Allied Vision) to capture images of the object.
 
-![Vimba camera](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/d4266fffc10a6dda559f0b50dde19bb7580f351b/assets/Images/camera_resized.png)
+![Vimba camera](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/c1bbaf1b814c93ffa672e63bffea63c40570025c/assets/Images/camera_resized.png)
 
 ## ⚙️ Setting up the Camera:
 ### 🪟 Windows OS
