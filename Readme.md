@@ -109,31 +109,32 @@ Inverse Kinematics is the reverse process of Forward Kinematics. Given the desir
 The image below shows the frames attached to each joint of the Eva arm.
 
    • A dot indicates a direction inward (into the plane).
+
    • Z-axis is represented by Blue, and X-axis by Red.
 
 ![Eva Frames](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/d7f4be4cd5f515651da0dd228e2fdedf25c8d90a/assets/Images/eva_with_frames.png)
 
-> Code is available in src/assets/python_codes.
+> Code to attach frames on Eva is available in src/assets/python_codes.
 
 Based on these frames, the following DH table is derived:
-![Eva Frames](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/19fd8ae74a4aec2689dabc612118ad632f99a169/assets/Images/evs_jointlimits.png)
+![Eva Frames](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/da3e8f50ccfb07184e34a1d5b52e8620583baae4/assets/Images/DH_Table.png)
 
 
 The DH table is constructed using the following four parameters for each joint:
 
-    θ (theta): The joint angle of rotation.
+   θ (theta): The joint angle of rotation.
 
-    a: The link length — the distance between two consecutive origins measured along the X-axis.
-    It's along the common normal between two Z-axes (and the X-axis lies along this common normal). Common normal is a vector perpendicular to both Z's.
+   a: The link length — the distance between two consecutive origins measured along the X-axis.
+   It's along the common normal between two Z-axes (and the X-axis lies along this common normal). Common normal is a vector perpendicular to both Z's.
 
-    d: The link offset — the distance between two consecutive origins measured along the Z-axis.
+   d: The link offset — the distance between two consecutive origins measured along the Z-axis.
 
-    α (alpha): The link twist — the rotation about the X-axis needed to align the previous Z-axis with the current Z-axis.
+   α (alpha): The link twist — the rotation about the X-axis needed to align the previous Z-axis with the current Z-axis.
 
-    Use the right-hand rule to determine the sign of rotation:
-    If the rotation appears counterclockwise (looking along the positive axis), the angle is positive.
+   Use the right-hand rule to determine the sign of rotation:
+   If the rotation appears counterclockwise (looking along the positive axis), the angle is positive.
 
-    If the rotation appears clockwise (looking along the positive axis), the angle is negative.
+   If the rotation appears clockwise (looking along the positive axis), the angle is negative.
 
 **Control of Eva Arm**
 
