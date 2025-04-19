@@ -122,14 +122,14 @@ Based on these frames, the following DH table is derived:
 
 The DH table is constructed using the following four parameters for each joint:
 
-   θ (theta): The joint angle of rotation.
+   **θ (theta):** The angle of rotation about previous Z-axis to align X-axis with current X-axis.
 
-   a: The link length — the distance between two consecutive origins measured along the X-axis.
+   **a: The link length** — the distance between two consecutive origins measured along the X-axis.
    It's along the common normal between two Z-axes (and the X-axis lies along this common normal). Common normal is a vector perpendicular to both Z's.
 
-   d: The link offset — the distance between two consecutive origins measured along the Z-axis.
+   **d: The link offset** — the distance between two consecutive origins measured along the Z-axis.
 
-   α (alpha): The link twist — the rotation about the X-axis needed to align the previous Z-axis with the current Z-axis.
+   **α (alpha):** The link twist — the rotation about the X-axis needed to align the previous Z-axis with the current Z-axis.
 
    Use the right-hand rule to determine the sign of rotation:
    If the rotation appears counterclockwise (looking along the positive axis), the angle is positive.
@@ -145,7 +145,7 @@ The robotic arm can be controlled in a few differnt ways:
 
 > 🧠 Before controlling with ROS, it's better to control with Choreograph and EvaSDK.
 
-![Eva Manual Image](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32471da8907243730529ba4688e61f91b32b88f7/assets/Images/evs_jointlimits.png)
+![Eva Manual Image](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/5454346d1d09927e4e7e03a13a7605a26572fe42/assets/Images/Eva_info.png)
 
 ### 🤖 Accessing and Controlling the Eva Robot via Choreograph
 
