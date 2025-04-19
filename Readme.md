@@ -91,13 +91,31 @@ Enter the IP Address and Network Mask manually, ensuring that the IP falls withi
 ---
 
 # 🦾 Eva Robotic Arm
-![Eva Frames](assets/Eva_man.jpg)
 
-| Tilt Angle  | Missed in 30 poses | Missed in 120 poses  | 
-|-------------|--------------------|----------------------|
-| **-10°**    | 6                  | 28                   |
-| **-20°**    | 8                  | 29                   |
+In robotics , **Forward Kinematics (FK)** and **Inverse Kinematics (IK)** are essential techniques used to describe and control the motion of robotic arms.
 
+![FK_IK](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/19fd8ae74a4aec2689dabc612118ad632f99a169/assets/Images/evs_jointlimits.png)
+
+**Forward Kinematics (FK)**
+
+Forward Kinematics is the process of determining the position and orientation of the end effector based on the known joint parameters.
+
+**Inverse Kinematics (IK)**
+
+Inverse Kinematics is the reverse process of Forward Kinematics. Given the desired position and orientation of the end effector, IK calculates the joint angles required to achieve that desired position.
+
+**Denavit-Hartenberg (DH) Table**
+The images below show the frames attached to each joint of the Eva arm.
+
+    • A dot indicates a direction inward (into the plane).
+    • Z-axis is represented by Blue, and X-axis by Red.
+
+![Eva Frames](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/19fd8ae74a4aec2689dabc612118ad632f99a169/assets/Images/evs_jointlimits.png)
+
+Based on these frames, the following DH table is derived:
+![Eva Frames](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/19fd8ae74a4aec2689dabc612118ad632f99a169/assets/Images/evs_jointlimits.png)
+
+**Control of Eva Arm**
 
 The robotic arm can be controlled in a few differnt ways:
 1. Chreograph - Automate
