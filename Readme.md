@@ -131,7 +131,7 @@ The DH table is constructed using the following four parameters for each joint:
 
    **α (alpha):** The link twist — the rotation about the X-axis needed to align the previous Z-axis with the current Z-axis.
 
-   Use the right-hand rule to determine the sign of rotation:
+   **Use the right-hand rule to determine the sign of rotation:**
    If the rotation appears counterclockwise (looking along the positive axis), the angle is positive.
 
    If the rotation appears clockwise (looking along the positive axis), the angle is negative.
