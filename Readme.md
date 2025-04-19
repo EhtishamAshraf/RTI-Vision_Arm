@@ -94,7 +94,7 @@ Enter the IP Address and Network Mask manually, ensuring that the IP falls withi
 
 In robotics , **Forward Kinematics (FK)** and **Inverse Kinematics (IK)** are essential techniques used to describe and control the motion of robotic arms.
 
-![FK_IK](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/19fd8ae74a4aec2689dabc612118ad632f99a169/assets/Images/evs_jointlimits.png)
+![FK_IK](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/d7f4be4cd5f515651da0dd228e2fdedf25c8d90a/assets/Flowcharts/FK_IK.png)
 
 **Forward Kinematics (FK)**
 
@@ -110,7 +110,9 @@ The images below show the frames attached to each joint of the Eva arm.
     • A dot indicates a direction inward (into the plane).
     • Z-axis is represented by Blue, and X-axis by Red.
 
-![Eva Frames](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/19fd8ae74a4aec2689dabc612118ad632f99a169/assets/Images/evs_jointlimits.png)
+![Eva Frames](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/d7f4be4cd5f515651da0dd228e2fdedf25c8d90a/assets/Images/eva_with_frames.png)
+
+> Code is available in src/assets/python_codes.
 
 Based on these frames, the following DH table is derived:
 ![Eva Frames](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/19fd8ae74a4aec2689dabc612118ad632f99a169/assets/Images/evs_jointlimits.png)
