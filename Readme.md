@@ -117,7 +117,7 @@ The image below shows the frames attached to each joint of the Eva arm.
 > Code to attach frames on Eva is available in src/assets/python_codes.
 
 Based on these frames, the following DH table is derived:
-![Eva Frames](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/da3e8f50ccfb07184e34a1d5b52e8620583baae4/assets/Images/DH_Table.png)
+![Eva dh table](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/da3e8f50ccfb07184e34a1d5b52e8620583baae4/assets/Images/DH_Table.png)
 
 
 The DH table is constructed using the following four parameters for each joint:
