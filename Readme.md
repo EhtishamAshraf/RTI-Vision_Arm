@@ -1,5 +1,6 @@
 # 🤖🔦 RTI-Vision_Arm
 It is a robotic inspection system that leverages a robotic arm as a dynamic light source and a Vimba camera to analyze object appearances using Reflectance Transformation Imaging (RTI). Designed for precision, it features an XY moving platform to position objects accurately underneath the camera for detailed surface inspection.
+
 ![Flowchart Image](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/f470cc14dfadbd00d28bf9a9b09034069bc50e7d/assets/Flowcharts/LightBot_Flowchart.png)
 
 ##### 📺 Demo Video
@@ -117,7 +118,7 @@ The image below shows the frames attached to each joint of the Eva arm.
 > Code to attach frames on Eva is available in src/assets/python_codes.
 
 Based on these frames, the following DH table is derived:
-![Eva Frames](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/da3e8f50ccfb07184e34a1d5b52e8620583baae4/assets/Images/DH_Table.png)
+![Eva dh table](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/da3e8f50ccfb07184e34a1d5b52e8620583baae4/assets/Images/DH_Table.png)
 
 
 The DH table is constructed using the following four parameters for each joint:
