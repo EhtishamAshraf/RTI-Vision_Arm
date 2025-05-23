@@ -589,7 +589,7 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
 - For processing 120 light poses, the system requires around 12 minutes and 33 
   seconds.
 - When processing 30 light poses, the time required is approximately 3 minutes and 
-  50 seconds.
+  15 seconds.
 
 ### 📊 Pose Capture Stats with Tilt for semi-spherical setup
 
