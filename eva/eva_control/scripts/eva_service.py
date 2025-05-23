@@ -166,7 +166,7 @@ class send_command():
                 print("Received a target pose: " + str(target_pose))
                 joint5_angle = ((-target_pose[4] + math.radians(179)) % math.radians(360) + math.radians(360)) % math.radians(360) - math.radians(179)
                 try: 
-                    self.eva.control_go_to([target_pose[0], target_pose[1], target_pose[2], target_pose[3], joint5_angle, target_pose[5]], mode="teach", max_speed=0.075)                    
+                    self.eva.control_go_to([target_pose[0], target_pose[1], target_pose[2], target_pose[3], joint5_angle, target_pose[5]], mode="teach", max_speed=0.185) # max_speed=0.075 - 3M50S, 0.125 - 3M25S, 0.15 - 3M18S, 0.185 - 3M15S                   
                 except evasdk.EvaError as e:
                     print(e)
                     if "Self Collision: Self collision will occur in the following tool-path." in str(e):
