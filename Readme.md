@@ -399,7 +399,7 @@ should list the **Serial Number** of the camera along with other details and cap
 python3 camera.py
 ```
 
-6. run vimbaviewer from: Vimba_6_0/Tools/Viewer/Bin/x86_64bit to have a GUI to check the detected cameras, if camera is detected then clicking on it should now open the camera in "FULL Access Mode".
+6. run vimbaviewer from: Vimba_6_0/Tools/Viewer/Bin/x86_64bit (run from terminal) to have a GUI to check the detected cameras, if camera is detected then clicking on it should now open the camera in "FULL Access Mode".
    
 7. And in the newly opened windown, Click on **Freerun** button and you should be able to get the live feed from the camera.
 
