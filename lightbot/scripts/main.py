@@ -84,7 +84,7 @@ class RobotControl():
         """Calling get_circular_waypoints_and_directions function to create a circle of light poses around the object"""
         # self.waypoint_marker, self.direction_markers, self.box_marker = utilities.get_circular_waypoints_and_directions()
         
-        """Calling get_spherical_waypoints_and_directions function to create a circle of light poses around the object"""
+        """Calling get_spherical_waypoints_and_directions function to create a half hemi-sphere of light poses around the object"""
         self.waypoint_marker, self.direction_markers, self.box_marker = utilities.get_spherical_waypoints_and_directions()
         
         # Publish the waypoints and direction vectors

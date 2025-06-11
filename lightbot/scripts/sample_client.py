@@ -12,13 +12,14 @@ Command to check the vimba camera parameters:
 from lightbot.srv import *
 import rospy
 
-f = open("/home/esirem/Desktop/M2_Thesis/4-RTI_Bot/eva_rti_ws/src/lightbot/data/light_pos.lp", "r")
-data = f.read()
-print(data)
 
-# function to call the load_lps service with the light positions data:
 def set_lps():
     rospy.init_node("sample_client")
+
+    with open("/home/esirem/Desktop/M2_Thesis/4-RTI_Bot/eva_rti_ws/src/lightbot/data/light_pos.lp", "r") as f:
+        data = f.read()
+        print("Loaded light positions:\n", data)
+
     print("Calling load lps service")
     rospy.wait_for_service('load_lps')
     try:
@@ -26,7 +27,8 @@ def set_lps():
         response = s(data)
         return response.successfully_loaded
     except rospy.ServiceException as e:
-        print("load lps Service call failed: %s"%e)
+        print("load lps Service call failed: %s" % e)
+
 
 # function to call the execute_acquisition service, to capture the images
 def acquire():
