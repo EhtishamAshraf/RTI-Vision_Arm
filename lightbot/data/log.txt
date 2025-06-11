@@ -6,3 +6,61 @@ New Acquisition @ 2025-04-11 16:46:26.104243
 Nb of LPs reached: 22, Nb of LPs not reachable: 8
 New Acquisition @ 2025-04-17 18:22:34.036147
 Nb of LPs reached: 24, Nb of LPs not reachable: 6
+New Acquisition @ 2025-06-06 22:14:59.306018
+Nb of LPs reached: 24, Nb of LPs not reachable: 6
+New Acquisition @ 2025-06-06 22:29:19.348437
+Nb of LPs reached: 24, Nb of LPs not reachable: 6
+New Acquisition @ 2025-06-06 22:31:28.950693
+Nb of LPs reached: 24, Nb of LPs not reachable: 6
+New Acquisition @ 2025-06-06 22:34:33.569212
+Nb of LPs reached: 24, Nb of LPs not reachable: 6
+New Acquisition @ 2025-06-06 22:37:16.775648
+Nb of LPs reached: 24, Nb of LPs not reachable: 6
+New Acquisition @ 2025-06-10 16:53:49.762078
+Nb of LPs reached: 5, Nb of LPs not reachable: 7
+New Acquisition @ 2025-06-10 17:01:54.176363
+Nb of LPs reached: 7, Nb of LPs not reachable: 5
+New Acquisition @ 2025-06-10 17:04:24.887845
+Nb of LPs reached: 10, Nb of LPs not reachable: 2
+New Acquisition @ 2025-06-10 17:13:03.836189
+Nb of LPs reached: 15, Nb of LPs not reachable: 15
+New Acquisition @ 2025-06-10 17:19:10.551567
+Nb of LPs reached: 27, Nb of LPs not reachable: 3
+New Acquisition @ 2025-06-11 11:56:07.595681
+Nb of LPs reached: 3, Nb of LPs not reachable: 1
+New Acquisition @ 2025-06-11 11:57:07.543057
+Nb of LPs reached: 3, Nb of LPs not reachable: 1
+New Acquisition @ 2025-06-11 13:35:18.763268
+Nb of LPs reached: 3, Nb of LPs not reachable: 1
+New Acquisition @ 2025-06-11 13:36:06.924667
+Nb of LPs reached: 3, Nb of LPs not reachable: 1
+New Acquisition @ 2025-06-11 13:42:36.838174
+Nb of LPs reached: 3, Nb of LPs not reachable: 1
+New Acquisition @ 2025-06-11 13:44:09.684155
+Nb of LPs reached: 3, Nb of LPs not reachable: 1
+New Acquisition @ 2025-06-11 13:56:55.659303
+Nb of LPs reached: 3, Nb of LPs not reachable: 1
+New Acquisition @ 2025-06-11 13:57:53.318143
+Nb of LPs reached: 3, Nb of LPs not reachable: 1
+New Acquisition @ 2025-06-11 14:01:52.218992
+Nb of LPs reached: 3, Nb of LPs not reachable: 1
+New Acquisition @ 2025-06-11 14:03:10.163310
+Nb of LPs reached: 3, Nb of LPs not reachable: 1
+New Acquisition @ 2025-06-11 14:29:40.634916
+Nb of LPs reached: 3, Nb of LPs not reachable: 1
+New Acquisition @ 2025-06-11 15:04:35.993997
+Nb of LPs reached: 24, Nb of LPs not reachable: 6
+New Acquisition @ 2025-06-11 15:10:42.706683
+Nb of LPs reached: 24, Nb of LPs not reachable: 6
+New Acquisition @ 2025-06-11 15:26:48.149661
+Nb of LPs reached: 27, Nb of LPs not reachable: 9
+New Acquisition @ 2025-06-11 15:31:07.640984
+Nb of LPs reached: 27, Nb of LPs not reachable: 9
+New Acquisition @ 2025-06-11 15:38:12.461000
+Nb of LPs reached: 27, Nb of LPs not reachable: 8
+New Acquisition @ 2025-06-11 15:43:58.705840
+Nb of LPs reached: 27, Nb of LPs not reachable: 8
+New Acquisition @ 2025-06-11 15:50:42.019420
+Nb of LPs reached: 24, Nb of LPs not reachable: 6
+New Acquisition @ 2025-06-11 15:54:25.471766
+Nb of LPs reached: 24, Nb of LPs not reachable: 6

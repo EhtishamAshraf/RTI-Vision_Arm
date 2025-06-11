@@ -486,6 +486,22 @@ def update_missed_waypoint_color(pose_stamped, direction_markers):
         return None  # If the waypoint isn't found then return nothing
     return direction_markers  # If found, return the updated markers
 
+
+"""
+The function to update the color of the direction vector after first acquisition:
+
+- marker contains the position of the direction vectors
+
+"""
+def reset_direction_marker_colors(direction_markers):
+    for marker in direction_markers.markers:
+        marker.color.r = 0.0
+        marker.color.g = 1.0
+        marker.color.b = 0.0
+        marker.color.a = 1.0
+    return direction_markers
+
+
 """ 
 --------------------------------------------------------------------------------
 Function for rotating the robotic arm about a specific axis (currently y-axis):

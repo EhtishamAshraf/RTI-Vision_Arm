@@ -1,5 +1,5 @@
 <launch>
-  <node name="lightbot" pkg="lightbot" type="main.py" output="screen">
+  <node name="lightbot" pkg="lightbot" type="main_turntable_acquistions.py" output="screen">
     <param name="robot_driver_server_name" type="str" value="eva_driver" />    
   </node>
 </launch>
