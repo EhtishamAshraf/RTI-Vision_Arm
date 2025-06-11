@@ -611,6 +611,11 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
     When theta is kept constant and phi is varied, the resulting image is captured as follows:
     ![phi changed](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/lightpose_phi_changed.png)
 
+### Large-Scale Objects
+
+   To acquire data from large-scale objects, a motorized turntable is employed. During the acquisition process, the object is rotated after first acquisition, enabling comprehensive coverage of large objects.
+   The process is automated and managed via the main_turntable_acquisitions.py script.
+
 
 ### 🧩 MoveIt Setup
 
