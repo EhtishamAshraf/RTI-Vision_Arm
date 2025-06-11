@@ -620,6 +620,7 @@ Click on the image below to view the video of the system in action.
 [![Watch the video](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/metal_plate.png)](https://youtu.be/8RlSMWvTJ8c)
 
 The image below shows the overlapping region between the two acquisitions, which is essential for accurate image stitching later.
+
 ![overlap](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
 
 ### 🧩 MoveIt Setup
