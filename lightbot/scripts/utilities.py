@@ -189,8 +189,8 @@ def get_spherical_waypoints_and_directions():
     waypoint_marker.color.a = 1.0   
 
     # Semi-sphere parameters
-    num_theta = 5    # Number of horizontal divisions
-    num_phi = 6      # Number of vertical divisions
+    num_theta = 3    # Number of horizontal divisions
+    num_phi = 4      # Number of vertical divisions
     radius = 0.28     # Radius
     center_x = -0.803  
     center_y = 0.716  

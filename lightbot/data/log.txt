@@ -64,3 +64,11 @@ New Acquisition @ 2025-06-11 15:50:42.019420
 Nb of LPs reached: 24, Nb of LPs not reachable: 6
 New Acquisition @ 2025-06-11 15:54:25.471766
 Nb of LPs reached: 24, Nb of LPs not reachable: 6
+New Acquisition @ 2025-06-12 11:10:22.491142
+Nb of LPs reached: 8, Nb of LPs not reachable: 4
+New Acquisition @ 2025-06-12 11:12:33.487580
+Nb of LPs reached: 8, Nb of LPs not reachable: 4
+New Acquisition @ 2025-06-12 14:37:18.738101
+Nb of LPs reached: 8, Nb of LPs not reachable: 4
+New Acquisition @ 2025-06-12 14:39:01.488765
+Nb of LPs reached: 8, Nb of LPs not reachable: 4
