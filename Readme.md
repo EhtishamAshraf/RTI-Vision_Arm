@@ -611,11 +611,17 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
     When theta is kept constant and phi is varied, the resulting image is captured as follows:
     ![phi changed](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/290feea186780d90fe82cc4863cb975122fa9d9a/assets/Images/lightpose_phi_changed.png)
 
-### Large-Scale Objects
+### 🌀 Large-Scale Objects
 
-   To acquire data from large-scale objects, a motorized turntable is employed. During the acquisition process, the object is rotated after first acquisition, enabling comprehensive coverage of large objects.
-   The process is automated and managed via the main_turntable_acquisitions.py script.
+To acquire data from large-scale objects, a motorized turntable is employed. During the acquisition process, the object is rotated after first acquisition, enabling comprehensive coverage of large objects.
+The process is automated and managed via the main_turntable_acquisitions.py script.
 
+Click on the image below to view the video of the system in action.
+[![Watch the video](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/metal_plate.png)](https://youtu.be/Ea_pt2rJQNA)
+
+The image below shows the overlapping region between the two acquisitions, which is essential for accurate image stitching later.
+
+![overlap](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
 
 ### 🧩 MoveIt Setup
 
