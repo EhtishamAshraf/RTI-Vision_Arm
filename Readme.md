@@ -617,7 +617,7 @@ To acquire data from large-scale objects, a motorized turntable is employed. Dur
 The process is automated and managed via the main_turntable_acquisitions.py script.
 
 Click on the image below to view the video of the system in action.
-[![Watch the video](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/metal_plate.png)](https://youtu.be/8RlSMWvTJ8c)
+[![Watch the video](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/metal_plate.png)](https://youtu.be/Ea_pt2rJQNA)
 
 The image below shows the overlapping region between the two acquisitions, which is essential for accurate image stitching later.
 
