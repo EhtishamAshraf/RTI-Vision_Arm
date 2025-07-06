@@ -460,7 +460,7 @@ Below is the visualization of the world as displayed in the TF frame from RViz.
 - The missed poses are turned RED in RVIZ by checking if the position of a marker is within 0.01 units of the target pose's position, to determine if it corresponds to a missed waypoint.
 
    Mathematically:∣Marker Position(𝑥,𝑦,𝑧) − Pose Position(𝑥,𝑦,𝑧)∣≤ 0.01
-- The current setup defines **semi-circular (Theta (θ): -70° to 58°) and semi-spherical (Phi (ϕ): 65° to 0°, and Theta (θ): -60° to 35°) light poses** around the object.
+- The current setup defines **semi-circular (Theta (θ): -70° to -35° and 5° to 58°) and semi-spherical (Phi (ϕ): 65° to 0°, and Theta (θ): -60° to 35°) light poses** around the object.
 - **Circular waypoints**
 
    To generate waypoints in a circular pattern around an object, we use **polar to 
