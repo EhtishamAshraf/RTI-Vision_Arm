@@ -623,6 +623,52 @@ The image below shows the overlapping region between the two acquisitions, which
 
 ![overlap](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
 
+## 🪡 Custom Image Stitching Pipeline
+The image stitching pipeline consists of 3 main steps:
+1.   Alignment of Images between Light Positions
+2.   Illumination correction
+3.   Blending
+
+#### Alignment of Images between Light Positions
+Mechanical vibrations during acquisition introduced slight misalignments between images captured under varying lighting conditions. To address this, intensity-based image registration was performed using the Enhanced Correlation Coefficient (ECC) algorithm in the gradient domain. All images in both acquisition sets were aligned relative to the first captured image. To quantitatively evaluate the effectiveness of this alignment, the Structural Similarity Index (SSIM) was used. An improvement in SSIM confirms that the alignment significantly enhanced structural consistency across lighting direc-
+tions. 
+![ssim](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+
+#### Illumination correction
+Illumination correction of images in both acquisitions was carried out using homomorphic
+filtering to compensate for non-uniform illumination caused by the spatially varying distance
+and angle of the light source relative to the surface. As illustrated in the below figure, the intensity of pixels along a single row in an image varies significantly when illuminated from a specific direction. This uneven illumination highlights how different parts of the surface receive varying light intensities as a result of the incident angle and distance from the light source.
+![light](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+
+#### Blending
+After alignment and illumination correction, the images from both acquisitions were stitched
+to reconstruct a complete surface representation. To identify correspondences between overlap-
+ping regions of the images, feature-based registration was used. Figures below shows the SIFT-based
+feature matching between the corresponding images, and highlights the overlapping region. 
+
+![sift](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+
+![overlap](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+
+
+A homography with the best matching score was selected as the transformation matrix to ensure geometric consistency. Initially, visible seams appeared due to intensity differences in
+the overlapping regions.
+
+![seam](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+
+
+Later, Multiband blending was applied to overcome the visible seam problem, as it produced
+smooth transitions across the stitched areas. 
+
+![blending](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+
+RTI models (PTM, HSH, and DMD) were evaluated before and after illumination correction using Mean Squared Error (MSE), Peak Signal-to-Noise Ratio (PSNR), and Structural Similarity Index (SSIM). These metrics were calculated for all images in both acquisitions to examine how illumination correction produces accurate results. To evaluate the performance of these models, the reconstructed images after relighting the object were compared against the original captured images, which serve as the ground truth. It could be seen that HSH performed better than PTM and DMD, followed by PTM, while
+DMD gave comparatively worse results. The suboptimal performance of the DMD approach is attributed to an insufficient number of captured images. At least 49 images are typically required for DMD to robustly decompose surface reflectance, avoiding bias due to sparse sampling. Structural similarity was improved and error was reduced, after applying illumination correction.
+
+![result](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+
+
+
 ### 🧩 MoveIt Setup
 
 - For MoveIt **simulation configuration**, the description file used is: `eva_without_rail.urdf`
@@ -645,4 +691,3 @@ The image below shows the overlapping region between the two acquisitions, which
 
 - Eva’s current workspace is limited. Future improvements may include:
   - Placing the robot on a **linear or circular rail**
-  - Adding rotation capability to the **XY platform** to allow varied object orientations
