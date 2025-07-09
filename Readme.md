@@ -667,7 +667,8 @@ DMD gave comparatively worse results. The suboptimal performance of the DMD appr
 
 ![result](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
 
-
+#### How to run?
+Have a look at the relevant folder, there is a main.py for image stitching as well as for rti relighting. Simply run the main.py after correcting the folders paths and it should work.
 
 ### 🧩 MoveIt Setup
 
