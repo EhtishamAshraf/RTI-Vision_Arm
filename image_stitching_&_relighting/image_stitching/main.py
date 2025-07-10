@@ -2,6 +2,7 @@
 This script implements a complete pipeline for image stitching, including cropping, alignment, light correction, stitching of images and blending.
 
 Note: The .lp file must have the total number of light positions written as an interger in the first line. Like: 23, 24 etc
+Note: This script only works for two acquisitions (AcqA and AcqB) at a time. It will not work for more than two acquisitions.
 """
 
 
