@@ -630,42 +630,33 @@ The image stitching pipeline consists of 3 main steps:
 3.   Blending
 
 #### Alignment of Images between Light Positions
-Mechanical vibrations during acquisition introduced slight misalignments between images captured under varying lighting conditions. To address this, intensity-based image registration was performed using the Enhanced Correlation Coefficient (ECC) algorithm in the gradient domain. All images in both acquisition sets were aligned relative to the first captured image. To quantitatively evaluate the effectiveness of this alignment, the Structural Similarity Index (SSIM) was used. An improvement in SSIM confirms that the alignment significantly enhanced structural consistency across lighting direc-
-tions. 
-![ssim](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+Mechanical vibrations during acquisition introduced slight misalignments between images captured under varying lighting conditions. To address this, intensity-based image registration was performed using the Enhanced Correlation Coefficient (ECC) algorithm in the gradient domain. All images in both acquisition sets were aligned relative to the first captured image. To quantitatively evaluate the effectiveness of this alignment, the Structural Similarity Index (SSIM) was used. An improvement in SSIM confirms that the alignment significantly enhanced structural consistency across lighting directions. Image shows result for Acquisition 1.
+![ssim](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/5cb36702c47e93f8a12e2291230de5efc0191f88/image_stitching_%26_relighting/data/2-processed_data/2-aligned_AcqA/analysis/ECC-ssim_comparison_plot.png)
 
 #### Illumination correction
-Illumination correction of images in both acquisitions was carried out using homomorphic
-filtering to compensate for non-uniform illumination caused by the spatially varying distance
-and angle of the light source relative to the surface. As illustrated in the below figure, the intensity of pixels along a single row in an image varies significantly when illuminated from a specific direction. This uneven illumination highlights how different parts of the surface receive varying light intensities as a result of the incident angle and distance from the light source.
-![light](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+Illumination correction of images in both acquisitions was carried out using homomorphic filtering to compensate for non-uniform illumination caused by the spatially varying distance and angle of the light source relative to the surface. As illustrated in the below figure, the intensity of pixels along a single row in an image varies significantly when illuminated from a specific direction. This uneven illumination highlights how different parts of the surface receive varying light intensities as a result of the incident angle and distance from the light source.
+![light](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/f4a62aaca3430f3f3c05d8cc63be5d4559bcb7b6/image_stitching_%26_relighting/dome_visualization/illumination.jpeg)
 
 #### Blending
-After alignment and illumination correction, the images from both acquisitions were stitched
-to reconstruct a complete surface representation. To identify correspondences between overlap-
-ping regions of the images, feature-based registration was used. Figures below shows the SIFT-based
-feature matching between the corresponding images, and highlights the overlapping region. 
+After alignment and illumination correction, the images from both acquisitions were stitched to reconstruct a complete surface representation. To identify correspondences between overlapping regions of the images, feature-based registration was used. Figures below shows the SIFT-based feature matching between the corresponding images, and highlights the overlapping region. 
 
-![sift](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+![sift](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/f4a62aaca3430f3f3c05d8cc63be5d4559bcb7b6/image_stitching_%26_relighting/data/3-stitched_output/nonlightcorrected/matches/LDR_2_Theta_347.50_Phi_65.00.png)
 
-![overlap](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+![overlap](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/f4a62aaca3430f3f3c05d8cc63be5d4559bcb7b6/image_stitching_%26_relighting/data/3-stitched_output/nonlightcorrected/overlap/overlap_LDR_2_Theta_347.50_Phi_65.00.png)
 
 
-A homography with the best matching score was selected as the transformation matrix to ensure geometric consistency. Initially, visible seams appeared due to intensity differences in
-the overlapping regions.
+A homography with the best matching score was selected as the transformation matrix to ensure geometric consistency. Initially, visible seams appeared due to intensity differences in the overlapping regions.
 
-![seam](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+![seam](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/f4a62aaca3430f3f3c05d8cc63be5d4559bcb7b6/image_stitching_%26_relighting/data/3-stitched_output/nonlightcorrected/no_blending/stitched_LDR_2_Theta_347.50_Phi_65.00.png)
 
 
-Later, Multiband blending was applied to overcome the visible seam problem, as it produced
-smooth transitions across the stitched areas. 
+Later, Multiband blending was applied to overcome the visible seam problem, as it produced smooth transitions across the stitched areas. 
 
-![blending](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+![blending](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/f4a62aaca3430f3f3c05d8cc63be5d4559bcb7b6/image_stitching_%26_relighting/data/3-stitched_output/nonlightcorrected/multiband/blend_stitched_LDR_2_Theta_347.50_Phi_65.00.png)
 
-RTI models (PTM, HSH, and DMD) were evaluated before and after illumination correction using Mean Squared Error (MSE), Peak Signal-to-Noise Ratio (PSNR), and Structural Similarity Index (SSIM). These metrics were calculated for all images in both acquisitions to examine how illumination correction produces accurate results. To evaluate the performance of these models, the reconstructed images after relighting the object were compared against the original captured images, which serve as the ground truth. It could be seen that HSH performed better than PTM and DMD, followed by PTM, while
-DMD gave comparatively worse results. The suboptimal performance of the DMD approach is attributed to an insufficient number of captured images. At least 49 images are typically required for DMD to robustly decompose surface reflectance, avoiding bias due to sparse sampling. Structural similarity was improved and error was reduced, after applying illumination correction.
+RTI models (PTM, HSH, and DMD) were evaluated before and after illumination correction using Mean Squared Error (MSE), Peak Signal-to-Noise Ratio (PSNR), and Structural Similarity Index (SSIM). These metrics were calculated for all images in both acquisitions to examine how illumination correction produces accurate results. To evaluate the performance of these models, the reconstructed images after relighting the object were compared against the original captured images, which serve as the ground truth. It could be seen that HSH performed better than PTM and DMD, followed by PTM, while DMD gave comparatively worse results. The suboptimal performance of the DMD approach is attributed to an insufficient number of captured images. At least 49 images are typically required for DMD to robustly decompose surface reflectance, avoiding bias due to sparse sampling. Structural similarity was improved and error was reduced, after applying illumination correction.
 
-![result](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/32d3599d2b62e0897eae12ad5aa18de5a80447bb/assets/Images/overlap_region.png)
+![result](https://github.com/EhtishamAshraf/RTI-Vision_Arm/blob/f4a62aaca3430f3f3c05d8cc63be5d4559bcb7b6/image_stitching_%26_relighting/relighting/model_comparison_light_correction.png)
 
 #### How to run?
 Have a look at the relevant folder, there is a main.py for image stitching as well as for rti relighting. Simply run the main.py after correcting the folders paths and it should work.
